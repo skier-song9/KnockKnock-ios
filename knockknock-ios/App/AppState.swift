@@ -26,6 +26,7 @@ final class AppState: ObservableObject {
     private var searchCancellables = Set<AnyCancellable>()
     private let deviceId = UserSession.makeDeviceId()
     private var lastJoinSignature: String?
+    private var serverNearbyUsers: [NearbyUser] = []
 
     init() {
         bleService = BLEService(deviceId: deviceId)
@@ -66,8 +67,10 @@ final class AppState: ObservableObject {
         isSearching = false
         bleService.stopAdvertising()
         bleService.stopScanning()
+        bleService.reset()
         wsService.disconnect()
         locationService.stopUpdating()
+        serverNearbyUsers = []
         nearbyUsers = []
         arrowAngle = 0
         isUIHidden = false
@@ -80,8 +83,14 @@ final class AppState: ObservableObject {
     private func setupBindings() {
         wsService.$nearbyUsers
             .sink { [weak self] users in
-                self?.nearbyUsers = users
-                self?.watchSessionService.sendToWatch(users)
+                self?.serverNearbyUsers = users
+                self?.mergeNearbyUsers()
+            }
+            .store(in: &bindingsCancellables)
+
+        bleService.$proximitySamples
+            .sink { [weak self] _ in
+                self?.mergeNearbyUsers()
             }
             .store(in: &bindingsCancellables)
 
@@ -176,5 +185,14 @@ final class AppState: ObservableObject {
         }
 
         arrowAngle = locationService.arrowAngle(to: rank1.currentGps)
+    }
+
+    private func mergeNearbyUsers() {
+        let samplesByDeviceId = bleService.proximitySamples
+        nearbyUsers = serverNearbyUsers.map { user in
+            user.applyingProximity(samplesByDeviceId[user.id])
+        }
+        watchSessionService.sendToWatch(nearbyUsers)
+        updateArrowAngle()
     }
 }
