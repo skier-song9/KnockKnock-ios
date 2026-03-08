@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		930DF9342F5C0C4700C41DBB /* knockknock-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 930DF9142F5C0C4500C41DBB /* knockknock-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		930DF9402F5C300000C41DBB /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 930DF9422F5C300000C41DBB /* SocketIO */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		930DF8F42F5C09E400C41DBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +26,50 @@
 			remoteGlobalIDString = 930DF8E52F5C09E300C41DBB;
 			remoteInfo = "knockknock-ios";
 		};
+		930DF9212F5C0C4700C41DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 930DF8DE2F5C09E300C41DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930DF9132F5C0C4500C41DBB;
+			remoteInfo = "knockknock-watch Watch App";
+		};
+		930DF92B2F5C0C4700C41DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 930DF8DE2F5C09E300C41DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930DF9132F5C0C4500C41DBB;
+			remoteInfo = "knockknock-watch Watch App";
+		};
+		930DF9322F5C0C4700C41DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 930DF8DE2F5C09E300C41DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930DF9132F5C0C4500C41DBB;
+			remoteInfo = "knockknock-watch Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		930DF9382F5C0C4700C41DBB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				930DF9342F5C0C4700C41DBB /* knockknock-watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		930DF8E62F5C09E300C41DBB /* knockknock-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "knockknock-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		930DF8F32F5C09E400C41DBB /* knockknock-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "knockknock-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		930DF8FD2F5C09E400C41DBB /* knockknock-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "knockknock-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		930DF9142F5C0C4500C41DBB /* knockknock-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "knockknock-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		930DF9202F5C0C4700C41DBB /* knockknock-watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "knockknock-watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		930DF92A2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "knockknock-watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +88,21 @@
 			path = "knockknock-iosUITests";
 			sourceTree = "<group>";
 		};
+		930DF9152F5C0C4500C41DBB /* knockknock-watch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "knockknock-watch Watch App";
+			sourceTree = "<group>";
+		};
+		930DF9232F5C0C4700C41DBB /* knockknock-watch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "knockknock-watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		930DF92D2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "knockknock-watch Watch AppUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930DF9402F5C300000C41DBB /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +128,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		930DF9112F5C0C4500C41DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF91D2F5C0C4700C41DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF9272F5C0C4700C41DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +158,9 @@
 				930DF8E82F5C09E300C41DBB /* knockknock-ios */,
 				930DF8F62F5C09E400C41DBB /* knockknock-iosTests */,
 				930DF9002F5C09E400C41DBB /* knockknock-iosUITests */,
+				930DF9152F5C0C4500C41DBB /* knockknock-watch Watch App */,
+				930DF9232F5C0C4700C41DBB /* knockknock-watch Watch AppTests */,
+				930DF92D2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests */,
 				930DF8E72F5C09E300C41DBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +171,9 @@
 				930DF8E62F5C09E300C41DBB /* knockknock-ios.app */,
 				930DF8F32F5C09E400C41DBB /* knockknock-iosTests.xctest */,
 				930DF8FD2F5C09E400C41DBB /* knockknock-iosUITests.xctest */,
+				930DF9142F5C0C4500C41DBB /* knockknock-watch Watch App.app */,
+				930DF9202F5C0C4700C41DBB /* knockknock-watch Watch AppTests.xctest */,
+				930DF92A2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,16 +188,19 @@
 				930DF8E22F5C09E300C41DBB /* Sources */,
 				930DF8E32F5C09E300C41DBB /* Frameworks */,
 				930DF8E42F5C09E300C41DBB /* Resources */,
+				930DF9382F5C0C4700C41DBB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				930DF9332F5C0C4700C41DBB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				930DF8E82F5C09E300C41DBB /* knockknock-ios */,
 			);
 			name = "knockknock-ios";
 			packageProductDependencies = (
+				930DF9422F5C300000C41DBB /* SocketIO */,
 			);
 			productName = "knockknock-ios";
 			productReference = 930DF8E62F5C09E300C41DBB /* knockknock-ios.app */;
@@ -163,6 +252,74 @@
 			productReference = 930DF8FD2F5C09E400C41DBB /* knockknock-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		930DF9132F5C0C4500C41DBB /* knockknock-watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930DF9352F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch App" */;
+			buildPhases = (
+				930DF9102F5C0C4500C41DBB /* Sources */,
+				930DF9112F5C0C4500C41DBB /* Frameworks */,
+				930DF9122F5C0C4500C41DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				930DF9152F5C0C4500C41DBB /* knockknock-watch Watch App */,
+			);
+			name = "knockknock-watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "knockknock-watch Watch App";
+			productReference = 930DF9142F5C0C4500C41DBB /* knockknock-watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		930DF91F2F5C0C4700C41DBB /* knockknock-watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930DF9392F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch AppTests" */;
+			buildPhases = (
+				930DF91C2F5C0C4700C41DBB /* Sources */,
+				930DF91D2F5C0C4700C41DBB /* Frameworks */,
+				930DF91E2F5C0C4700C41DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				930DF9222F5C0C4700C41DBB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				930DF9232F5C0C4700C41DBB /* knockknock-watch Watch AppTests */,
+			);
+			name = "knockknock-watch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "knockknock-watch Watch AppTests";
+			productReference = 930DF9202F5C0C4700C41DBB /* knockknock-watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		930DF9292F5C0C4700C41DBB /* knockknock-watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930DF93C2F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch AppUITests" */;
+			buildPhases = (
+				930DF9262F5C0C4700C41DBB /* Sources */,
+				930DF9272F5C0C4700C41DBB /* Frameworks */,
+				930DF9282F5C0C4700C41DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				930DF92C2F5C0C4700C41DBB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				930DF92D2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests */,
+			);
+			name = "knockknock-watch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "knockknock-watch Watch AppUITests";
+			productReference = 930DF92A2F5C0C4700C41DBB /* knockknock-watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +341,17 @@
 						CreatedOnToolsVersion = 26.3;
 						TestTargetID = 930DF8E52F5C09E300C41DBB;
 					};
+					930DF9132F5C0C4500C41DBB = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					930DF91F2F5C0C4700C41DBB = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 930DF9132F5C0C4500C41DBB;
+					};
+					930DF9292F5C0C4700C41DBB = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 930DF9132F5C0C4500C41DBB;
+					};
 				};
 			};
 			buildConfigurationList = 930DF8E12F5C09E300C41DBB /* Build configuration list for PBXProject "knockknock-ios" */;
@@ -195,6 +363,9 @@
 			);
 			mainGroup = 930DF8DD2F5C09E300C41DBB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				930DF9412F5C300000C41DBB /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 930DF8E72F5C09E300C41DBB /* Products */;
 			projectDirPath = "";
@@ -203,6 +374,9 @@
 				930DF8E52F5C09E300C41DBB /* knockknock-ios */,
 				930DF8F22F5C09E400C41DBB /* knockknock-iosTests */,
 				930DF8FC2F5C09E400C41DBB /* knockknock-iosUITests */,
+				930DF9132F5C0C4500C41DBB /* knockknock-watch Watch App */,
+				930DF91F2F5C0C4700C41DBB /* knockknock-watch Watch AppTests */,
+				930DF9292F5C0C4700C41DBB /* knockknock-watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +397,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		930DF8FB2F5C09E400C41DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF9122F5C0C4500C41DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF91E2F5C0C4700C41DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF9282F5C0C4700C41DBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +448,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		930DF9102F5C0C4500C41DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF91C2F5C0C4700C41DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		930DF9262F5C0C4700C41DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +481,21 @@
 			isa = PBXTargetDependency;
 			target = 930DF8E52F5C09E300C41DBB /* knockknock-ios */;
 			targetProxy = 930DF8FE2F5C09E400C41DBB /* PBXContainerItemProxy */;
+		};
+		930DF9222F5C0C4700C41DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930DF9132F5C0C4500C41DBB /* knockknock-watch Watch App */;
+			targetProxy = 930DF9212F5C0C4700C41DBB /* PBXContainerItemProxy */;
+		};
+		930DF92C2F5C0C4700C41DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930DF9132F5C0C4500C41DBB /* knockknock-watch Watch App */;
+			targetProxy = 930DF92B2F5C0C4700C41DBB /* PBXContainerItemProxy */;
+		};
+		930DF9332F5C0C4700C41DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930DF9132F5C0C4500C41DBB /* knockknock-watch Watch App */;
+			targetProxy = 930DF9322F5C0C4700C41DBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,19 +626,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QSN8D73M83;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/knockknock-ios-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = song9.knockknock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -426,19 +654,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QSN8D73M83;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/knockknock-ios-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = song9.knockknock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -459,7 +684,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -480,7 +705,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -499,7 +724,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-iosUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -518,7 +743,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "song9.knockknock-iosUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -527,6 +752,156 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "knockknock-ios";
+			};
+			name = Release;
+		};
+		930DF9362F5C0C4700C41DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KnockKnock Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.knockknock;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		930DF9372F5C0C4700C41DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KnockKnock Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.knockknock;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		930DF93A2F5C0C4700C41DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watch.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/knockknock-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/knockknock-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		930DF93B2F5C0C4700C41DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watch.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/knockknock-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/knockknock-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		930DF93D2F5C0C4700C41DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watch.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "knockknock-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		930DF93E2F5C0C4700C41DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.knockknock.watch.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "knockknock-watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
 		};
@@ -569,7 +944,53 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		930DF9352F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930DF9362F5C0C4700C41DBB /* Debug */,
+				930DF9372F5C0C4700C41DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930DF9392F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930DF93A2F5C0C4700C41DBB /* Debug */,
+				930DF93B2F5C0C4700C41DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930DF93C2F5C0C4700C41DBB /* Build configuration list for PBXNativeTarget "knockknock-watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930DF93D2F5C0C4700C41DBB /* Debug */,
+				930DF93E2F5C0C4700C41DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		930DF9412F5C300000C41DBB /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		930DF9422F5C300000C41DBB /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 930DF9412F5C300000C41DBB /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 930DF8DE2F5C09E300C41DBB /* Project object */;
 }

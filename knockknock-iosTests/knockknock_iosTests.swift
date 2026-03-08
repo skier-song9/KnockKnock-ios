@@ -1,36 +1,47 @@
-//
-//  knockknock_iosTests.swift
-//  knockknock-iosTests
-//
-//  Created by onomaai on 3/7/26.
-//
-
 import XCTest
+import CoreLocation
 @testable import knockknock_ios
 
 final class knockknock_iosTests: XCTestCase {
+    func test_bearingNorth() {
+        let from = CLLocationCoordinate2D(latitude: 37.0, longitude: 127.0)
+        let to = CLLocationCoordinate2D(latitude: 38.0, longitude: 127.0)
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let bearing = BearingCalculator.bearing(from: from, to: to)
+        XCTAssertEqual(bearing, 0, accuracy: 1.0)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_bearingEast() {
+        let from = CLLocationCoordinate2D(latitude: 37.0, longitude: 127.0)
+        let to = CLLocationCoordinate2D(latitude: 37.0, longitude: 128.0)
+
+        let bearing = BearingCalculator.bearing(from: from, to: to)
+        XCTAssertEqual(bearing, 90, accuracy: 2.0)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_arrowAngle_pointsCorrectly() {
+        let from = CLLocationCoordinate2D(latitude: 37.0, longitude: 127.0)
+        let to = CLLocationCoordinate2D(latitude: 37.0, longitude: 128.0)
+
+        let arrow = BearingCalculator.arrowAngle(
+            myLocation: from,
+            targetLocation: to,
+            heading: 0.0
+        )
+
+        XCTAssertEqual(arrow, 90, accuracy: 2.0)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    func test_arrowAngle_compensatesHeading() {
+        let from = CLLocationCoordinate2D(latitude: 37.0, longitude: 127.0)
+        let to = CLLocationCoordinate2D(latitude: 37.0, longitude: 128.0)
 
+        let arrow = BearingCalculator.arrowAngle(
+            myLocation: from,
+            targetLocation: to,
+            heading: 90.0
+        )
+
+        XCTAssertEqual(arrow, 0, accuracy: 2.0)
+    }
 }
