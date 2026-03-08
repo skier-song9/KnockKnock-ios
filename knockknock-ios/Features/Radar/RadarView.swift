@@ -55,7 +55,7 @@ struct RadarView: View {
 
     private var radarGrid: some View {
         ZStack {
-            ForEach([0.3, 0.6, 1.0], id: \.self) { scale in
+            ForEach([0.45, 0.75, 1.05], id: \.self) { scale in
                 Circle()
                     .stroke(Color.white.opacity(0.05), lineWidth: 1)
                     .scaleEffect(scale)
@@ -125,11 +125,24 @@ struct RadarView: View {
     private func labelPosition(for user: NearbyUser, in size: CGSize) -> CGPoint {
         let center = CGPoint(x: size.width / 2, y: size.height / 2)
         let angleRad = user.displayAngle * .pi / 180
-        let radius = user.displayRadius.clamped(to: Double(radarRadius * 0.4)...Double(radarRadius * 1.2))
+        let radius = radius(for: user.proximityBin)
 
         return CGPoint(
-            x: center.x + CGFloat(sin(angleRad)) * CGFloat(radius),
-            y: center.y - CGFloat(cos(angleRad)) * CGFloat(radius)
+            x: center.x + CGFloat(sin(angleRad)) * radius,
+            y: center.y - CGFloat(cos(angleRad)) * radius
         )
+    }
+
+    private func radius(for bin: ProximityBin) -> CGFloat {
+        switch bin {
+        case .near:
+            return radarRadius * 0.45
+        case .mid:
+            return radarRadius * 0.75
+        case .far:
+            return radarRadius * 1.05
+        case .unknown:
+            return radarRadius * 1.15
+        }
     }
 }

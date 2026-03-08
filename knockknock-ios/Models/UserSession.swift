@@ -42,21 +42,39 @@ struct UserSession: Codable, Equatable {
         if status == errSecSuccess,
            let data = result as? Data,
            let id = String(data: data, encoding: .utf8) {
-            return id
+            let canonicalId = AdvertisementPayloadV1.canonicalDeviceId(from: id) ?? UUID().uuidString.lowercased()
+            if canonicalId != id {
+                persistDeviceId(canonicalId, service: service, account: account)
+            }
+            return canonicalId
         }
 
         // Generate new UUID and store in Keychain
-        let newId = UUID().uuidString
-        guard let data = newId.data(using: .utf8) else { return newId }
-        let addQuery: [String: Any] = [
+        let newId = UUID().uuidString.lowercased()
+        persistDeviceId(newId, service: service, account: account)
+        return newId
+    }
+
+    private static func persistDeviceId(_ deviceId: String, service: String, account: String) {
+        guard let data = deviceId.data(using: .utf8) else { return }
+
+        let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
             kSecAttrAccount as String: account,
+        ]
+
+        let attributes: [String: Any] = [
             kSecValueData as String: data,
             kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock,
         ]
-        SecItemAdd(addQuery as CFDictionary, nil)
-        return newId
+
+        let updateStatus = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
+        if updateStatus == errSecItemNotFound {
+            var addQuery = query
+            attributes.forEach { addQuery[$0.key] = $0.value }
+            SecItemAdd(addQuery as CFDictionary, nil)
+        }
     }
 }
 

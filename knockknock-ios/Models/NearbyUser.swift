@@ -9,8 +9,8 @@ struct NearbyUser: Identifiable, Codable {
     let currentGps: GpsCoordinate
     let isPrivate: Bool
 
-    // RSSI 기반 반경 (기본값: 중간 거리, UI-only — not from server)
-    var displayRadius: Double = 100
+    // BLE proximity is merged locally after WebSocket users arrive.
+    var proximitySample: ProximitySample?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,7 +29,11 @@ struct NearbyUser: Identifiable, Codable {
         rank = try container.decode(Int.self, forKey: .rank)
         currentGps = try container.decode(GpsCoordinate.self, forKey: .currentGps)
         isPrivate = try container.decode(Bool.self, forKey: .isPrivate)
-        displayRadius = 100 // UI-only, not from JSON
+        proximitySample = nil
+    }
+
+    var proximityBin: ProximityBin {
+        proximitySample?.bin ?? .unknown
     }
 
     // 레이더 배치용 (세션 내 고정 각도, deviceId 기반 — deterministic djb2 hash)
@@ -40,11 +44,11 @@ struct NearbyUser: Identifiable, Codable {
     }
 
     var sensorColor: Color {
-        switch remainingStops {
-        case 1:  return .red
-        case 2:  return .orange
-        case 3:  return .yellow
-        default: return .blue
+        switch proximityBin {
+        case .near: return .red
+        case .mid: return .orange
+        case .far: return .blue
+        case .unknown: return .gray.opacity(0.6)
         }
     }
 
@@ -77,6 +81,12 @@ struct NearbyUser: Identifiable, Codable {
 
     var zIndex: Double {
         return Double(max(100 - (rank - 1) * 25, 25))
+    }
+
+    func applyingProximity(_ sample: ProximitySample?) -> NearbyUser {
+        var updated = self
+        updated.proximitySample = sample
+        return updated
     }
 }
 
